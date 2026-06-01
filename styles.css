@@ -40,6 +40,7 @@ body {
   background: var(--surface);
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 .site-header .container {
@@ -64,6 +65,11 @@ body {
   padding: 0.5rem;
 }
 
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 nav ul {
   display: flex;
   gap: 1rem;
@@ -74,6 +80,11 @@ nav ul {
 
 a {
   color: var(--accent);
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
 }
 
 section {
